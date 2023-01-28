@@ -1,0 +1,33 @@
+/*
+ * Hackathon Iași
+ * Powered by IAȘI AI community
+ *
+ * @copyright (c) 2023 IAȘI AI. All rights reserved.
+ * @link https://hackathon.is
+ * @link https://iasi.ai
+ */
+
+// Default page structure
+.page {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  // Header
+  @import "header";
+
+  // Main
+  @import "main";
+
+  // Footer
+  @import "footer";
+
+  // Section(s)
+  @import "section";
+
+  // Logo
+  @import "logo";
+}

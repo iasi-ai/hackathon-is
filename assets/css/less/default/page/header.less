@@ -1,0 +1,76 @@
+/*
+ * Hackathon Iași
+ * Powered by IAȘI AI community
+ *
+ * @copyright (c) 2023 IAȘI AI. All rights reserved.
+ * @link https://hackathon.is
+ * @link https://iasi.ai
+ */
+
+// Header
+header {
+  padding: 2em 0 1em;
+
+  @media (min-width: @mediaQueryMedium) {
+    padding: 4em 0 3em;
+  }
+
+  // Container
+  .container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    @media (min-width: @mediaQuerySmall) {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+
+    // Navigation
+    nav {
+      .grid;
+      margin: 3em auto 0;
+
+      @media (min-width: @mediaQueryMedium) {
+        text-align: right;
+        margin: 0;
+      }
+
+      ul {
+        display: block;
+
+        @media (min-width: @mediaQueryMedium) {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-end;
+        }
+
+        li {
+          font-size: 1.1em;
+
+          @media (min-width: @mediaQueryMedium) {
+            margin: 0 0 0 1em;
+
+            &:nth-child(1) {
+              margin: 0;
+            }
+          }
+
+          &.separator {
+            padding-left: 1.1em;
+            margin-left: 1.1em;
+            border-left: 1px dashed @color9;
+          }
+
+          a {
+            display: block;
+
+            @media (min-width: @mediaQueryMedium) {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+/*
+ * Hackathon Iași
+ * Powered by IAȘI AI community
+ *
+ * @copyright (c) 2023 IAȘI AI. All rights reserved.
+ * @link https://hackathon.is
+ * @link https://iasi.ai
+ */
+
+// Palace SVG
+@svg: "@{S3}palace.svg";
+
+// Size mapping
+// w      h
+// 236    642
+// 150    408
+// 50     136
+
+// Logo
+.define-logo(@fontSize: 2) {
+  // Calculate height
+  // @calculatedWidth: @fontSize * 40;
+  // @calculatedHeight: round(( @calculatedWidth * 136 / 50 ));
+  @calculatedHeight: @fontSize * 40 + 10;
+  @calculatedWidth: round((@calculatedHeight * 50 / 136)) + 10;
+  @calculatedPadding: @calculatedWidth + 15;
+
+  position: relative;
+  font-size: ~"@{fontSize}em";
+  text-align: right;
+  text-transform: uppercase;
+  padding-right: ~"@{calculatedPadding}px";
+
+  &:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: -10px;
+
+    width: ~"@{calculatedWidth}px";
+    height: ~"@{calculatedHeight}px";
+
+    background: url(@svg) no-repeat center right;
+    background-size: cover;
+  }
+
+  strong {
+    display: block;
+    margin: -.5em 0 0;
+    font-size: 1.1em;
+  }
+}
+
+.logo {
+  .define-logo;
+}
+
+.logo-lg {
+  .define-logo(3);
+}
+
+.logo-sm {
+  .define-logo(1);
+}
