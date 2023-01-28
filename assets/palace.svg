@@ -1,0 +1,20 @@
+<svg id="Palace_shape" data-name="Palace shape" xmlns="http://www.w3.org/2000/svg" width="236" height="642" viewBox="0 0 236 642">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #1dbcf0;
+        stroke-width: 1px;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="118.891" cy="504.922" r="28.797"/>
+  <path class="cls-2" d="M34.1,623.331v-118.4l-21.6-24.8v-5.6h3.2v-48H12.5v-21.6H5.3v-6.4h6.4v-19.2H26.9v-14.4H21.3v-4.8h-8v-8l13.6-16v-18.4l5.6-70.4h4.8l4.8,63.2,0.8,25.6,11.2,14.4,45.6-142.4-8.8-23.2,13.6-13.6,0.8-36.8,1.6-94.4,1.6,130.4h19.2"/>
+  <path id="Shape_2_copy" data-name="Shape 2 copy" class="cls-2" d="M202.9,623.331v-118.4l21.6-24.8v-5.6h-3.2v-48h3.2v-21.6h7.2v-6.4h-6.4v-19.2H210.1v-14.4h5.6v-4.8h8v-8l-13.6-16v-18.4l-5.6-70.4h-4.8l-4.8,63.2-0.8,25.6-11.2,14.4-45.6-142.4,8.8-23.2-13.6-13.6-0.8-36.8-1.6-94.4-1.6,130.4H109.3"/>
+  <circle class="cls-1" cx="34.5" cy="629.328" r="6.813"/>
+  <circle id="Ellipse_2_copy" data-name="Ellipse 2 copy" class="cls-1" cx="202.297" cy="629.328" r="6.797"/>
+</svg>
