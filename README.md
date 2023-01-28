@@ -1,2 +1,1 @@
-# hackathon-is
-Hackathon.is website
+### HACKATHON IAȘI
