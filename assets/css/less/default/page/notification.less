@@ -1,0 +1,67 @@
+/*
+ * Hackathon Iași
+ * Powered by IAȘI AI community
+ *
+ * @copyright (c) 2023 IAȘI AI. All rights reserved.
+ * @link https://hackathon.is
+ * @link https://iasi.ai
+ */
+
+.notification {
+  display: table;
+  border-radius: .35em;
+  padding: .75em;
+  margin: .5em auto 1em;
+  font-size: 1em;
+  color: var(--color-text);
+
+  &.notification-sm {
+    padding: .35em .5em;
+  }
+
+  &.notification-inline {
+    display: inline-block;
+  }
+
+  &.error {
+    background: var(--danger);
+    color: var(--text-color-white);
+  }
+
+  &.info {
+    background: var(--info);
+    color: var(--text-color-white);
+  }
+
+  &.success {
+    background: var(--green);
+    color: var(--text-color-white);
+  }
+
+  &.warning {
+    background: var(--orange);
+    color: var(--text-color-white);
+  }
+
+  // Floating notification
+  &.notification-floating {
+    position: fixed;
+    z-index: 2;
+
+    width: 90%;
+
+    // Positioning
+    top: 20px;
+    left: 5%;
+
+    @media (min-width: @mediaQueryMedium) {
+      width: auto;
+      left: 2em;
+    }
+  }
+
+  // Fade in animation
+  &.notification-animation {
+    animation: fadeIn 1s;
+  }
+}

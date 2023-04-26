@@ -124,7 +124,11 @@
     letter-spacing: -.5px;
     text-transform: uppercase;
 
-    margin: 0 auto .5em;
+    margin: 1.5em auto .5em;
+
+    @media (min-width: @mediaQueryMedium) {
+      margin: 0 auto .5em;
+    }
 
     & > span {
       font-size: .85em;
@@ -133,17 +137,21 @@
 
   // Event challenge details
   ul.event-challenge {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    @media (min-width: @mediaQueryMedium) {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
 
     margin: 1em auto 0;
 
     li {
-      margin-left: 1.5em;
-
       &:nth-child(1) {
         margin-left: 0;
+      }
+
+      &:nth-child(2) {
+        margin-left: auto;
       }
     }
   }
