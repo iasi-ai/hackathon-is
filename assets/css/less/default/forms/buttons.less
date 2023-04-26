@@ -7,34 +7,39 @@
  * @link https://iasi.ai
  */
 
-// Button structure mixin
-.define-button (@textColor, @backgroundColor, @backgroundColorHover) {
-  background-color: var(@backgroundColor);
-
-  color: var(@textColor);
-  text-decoration: none;
+// Simple button mixin
+.simple-button (@textColor, @backgroundColor, @backgroundColorHover) {
+  background-color: @backgroundColor;
+  color: @textColor;
 
   &:hover {
-    background-color: var(@backgroundColorHover);
+    background-color: @backgroundColorHover;
+    color: @textColor;
+  }
+}
 
-    color: var(@textColor);
-    text-decoration: none;
+// Button mixin
+.define-button (@textColor, @textColorHover, @backgroundColor, @backgroundColorHover) {
+  background-color: @backgroundColor;
+  color: @textColor;
+
+  &:hover,
+  &.active {
+    background-color: @backgroundColorHover;
+    color: @textColorHover;
   }
 }
 
 // Bordered button
-.define-bordered-button (@textColor, @backgroundColor, @backgroundColorHover, @borderColor, @borderColorHover, @borderWidth: 1px) {
-  background-color: var(@backgroundColor);
-  border: var(@borderWidth) solid var(@borderColor);
+.define-border-button (@textColor, @textColorHover, @backgroundColor, @backgroundColorHover, @borderColor, @borderColorHover) {
+  background-color: @backgroundColor;
+  border-color: @borderColor;
+  color: @textColor;
 
-  color: var(@textColor);
-  text-decoration: none;
-
-  &:hover {
-    background-color: var(@backgroundColorHover);
-    border-color: var(@borderColorHover);
-
-    color: var(@textColor);
-    text-decoration: none;
+  &:hover,
+  &.active {
+    background-color: @backgroundColorHover;
+    border-color: @borderColorHover;
+    color: @textColorHover;
   }
 }

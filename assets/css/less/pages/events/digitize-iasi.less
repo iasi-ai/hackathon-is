@@ -1,0 +1,52 @@
+/*
+ * Hackathon Iași
+ * Powered by IAȘI AI community
+ *
+ * @copyright (c) 2023 IAȘI AI. All rights reserved.
+ * @link https://hackathon.is
+ * @link https://iasi.ai
+ */
+
+// Config
+@digitizeIasiLogoLg: '@{S3}events/digitize-iasi/iasi-lg.png';
+@digitizeIasiLogoMd: '@{S3}events/digitize-iasi/iasi-md.png';
+@digitizeIasiLogoSm: '@{S3}events/digitize-iasi/iasi-sm.png';
+
+// Sizes
+// w      h
+// 200    64
+// 400    129
+// 844    272
+
+// Digitize IAȘI hackathon
+.digitize-iasi-hackathon {
+  background: url("@{S3}events/digitize-iasi/digitize-iasi-cover.jpg") no-repeat fixed center;
+  background-size: cover;
+  border-top: 1px solid #333;
+
+  color: var(--text-color-white);
+}
+
+// Digitize IAȘI event
+.digitize-iasi-logo {
+  @calculatedHeight: 25;
+  @calculatedWidth: round((@calculatedHeight * 844 / 272));
+  @calculatedPadding: @calculatedWidth + 15;
+
+  position: relative;
+  display: inline;
+  padding-right: ~"@{calculatedPadding}px";
+
+  &:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+
+    width: ~"@{calculatedWidth}px";
+    height: ~"@{calculatedHeight}px";
+
+    background: url(@digitizeIasiLogoMd) no-repeat center right;
+    background-size: cover;
+  }
+}

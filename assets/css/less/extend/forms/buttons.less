@@ -9,20 +9,22 @@
 
 // Default button
 .btn-default {
-  .define-button(--button-default-text-color, --button-default-background-color, --button-default-background-color-hover);
+  .define-button(var(--button-default-text-color), var(--button-default-text-color-hover), var(--button-default-background-color), var(--button-default-background-color-hover));
 }
 
-// Header `Let's get in touch` button
-.header-btn-1 {
-  .define-button(--button-primary-text-color, --button-primary-background-color, --button-primary-background-color-hover);
-  box-shadow: 0 0 .15em rgba(0, 0, 0, .25);
-
-  &:hover {
-    box-shadow: 0 0 .25em rgba(0, 0, 0, .35);
-  }
+.btn-primary {
+  .define-button(var(--button-primary-text-color), var(--button-primary-text-color-hover), var(--button-primary-background-color), var(--button-primary-background-color-hover));
 }
 
-// Header regular button
-.header-btn-2 {
-  .define-bordered-button(--button-secondary-text-color, --button-secondary-background-color, --button-secondary-background-color-hover, --button-secondary-border-color, --button-secondary-border-color-hover);
+.btn-cancel {
+  .define-button(var(--button-cancel-text-color), var(--button-cancel-text-color-hover), var(--button-cancel-background-color), var(--button-cancel-background-color-hover));
+}
+
+// Bordered button
+.btn-bordered-default {
+  .define-border-button(var(--button-bordered-default-text), var(--button-bordered-default-text-color-hover), var(--button-bordered-default-background-color), var(--button-bordered-default-background-color-hover), var(--button-bordered-default-border-color), var(--button-bordered-default-border-color-hover));
+}
+
+.btn-bordered-venue {
+  .define-border-button(var(--button-venue-default-text), var(--button-bordered-venue-text-color-hover), var(--button-bordered-venue-background-color), var(--button-bordered-venue-background-color-hover), var(--button-bordered-venue-border-color), var(--button-bordered-venue-border-color-hover));
 }

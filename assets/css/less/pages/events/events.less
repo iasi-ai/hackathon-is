@@ -1,0 +1,178 @@
+/*
+ * Hackathon Iași
+ * Powered by IAȘI AI community
+ *
+ * @copyright (c) 2023 IAȘI AI. All rights reserved.
+ * @link https://hackathon.is
+ * @link https://iasi.ai
+ */
+
+// Events page
+.events {
+  // height: 100%;
+  // min-height: 100%;
+  padding: 2.5em 0;
+
+  &:nth-of-type(1) {
+    flex-grow: 1;
+  }
+
+  // Section(s)
+  &.event-mentors {
+    background-color: var(--white);
+    // height: 100%;
+  }
+
+  // Brands
+  .event-brands {
+    display: flex;
+    flex-flow: column nowrap;
+
+    @media (min-width: @mediaQueryLarge) {
+      flex-flow: row nowrap;
+    }
+
+    & > div:nth-child(1) {
+      @media (min-width: @mediaQueryMedium) {
+        width: 360px;
+      }
+    }
+
+    & > div:nth-child(2) {
+      margin: 3em auto 0;
+
+      @media (min-width: @mediaQueryMedium) {
+        margin: 0 0 0 6em;
+      }
+    }
+
+    .brands {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-evenly;
+
+      @media (min-width: @mediaQueryMedium) {
+        justify-content: flex-start;
+      }
+
+      li {
+        margin-left: .5em;
+
+        &:nth-child(1) {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Event date and venue list
+  ul.event-date-venue {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1.25em auto;
+    font-size: 1.2em;
+
+    & > li {
+      line-height: 2em;
+      margin-top: .5em;
+
+      &:nth-of-type(1) {
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: @mediaQueryMedium) {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+
+      & > li {
+        margin-left: 1.5em;
+        margin-top: 0;
+
+        &:nth-of-type(1) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  // Heading
+  h1 {
+    position: relative;
+    font-size: 2.8em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 auto .75em;
+    text-align: center;
+
+    @media (min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      content: '# ';
+      font-weight: 300;
+      opacity: .15;
+
+      @media (min-width: @mediaQueryMedium) {
+        left: -.85em;
+      }
+    }
+
+    &:after {
+      content: ' hackathon';
+      font-weight: 300;
+      opacity: .5;
+      font-size: .7em;
+      display: block;
+      margin: -.5em auto 0;
+
+      @media (min-width: @mediaQueryMedium) {
+        display: inline;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: -.5px;
+    text-transform: uppercase;
+
+    margin: 0 auto .75em;
+    text-align: center;
+
+    @media (min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+  }
+
+  h3 {
+    font-weight: 300;
+    letter-spacing: -.5px;
+    text-transform: uppercase;
+
+    margin: 0 auto .75em;
+    text-align: center;
+
+    @media (min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+  }
+
+  // Paragraphs
+  p {
+    font-size: 1.1em;
+    margin: 0 0 1.25em;
+
+    &:nth-of-type(:last-child) {
+      margin: 0;
+    }
+  }
+}

@@ -32,19 +32,6 @@
 @cover-sm: "@{S3}@{theCover}-sm.jpg";
 
 // Colors
-@color1: #1dbcf0; // Logo color
-@color2: #3c78a2; // Logo secondary color
-
-@color3: rgba(248, 248, 248, 1); // Background color
-@color4: #222; // Text color
-@color5: #fff;
-@color6: rgba(85, 100, 114, 1); // Primary button background color
-@color7: rgba(85, 100, 114, .4); // Disabled button background color
-@color8: #ccc; // Separator
-@color9: #777; // Link border color
-@color10: rgba(229, 236, 241, 1); // home page section background color
-
-// Colors
 :root {
   --logo-color: #1dbcf0;
   --logo-color-secondary: #3c78a2;
@@ -52,6 +39,7 @@
   --background-color: rgba(248, 248, 248, 1);
   --text-color: #222;
   --text-color-white: #fff;
+  --text-color-placeholder: #a1a1a1;
 
   --anchor-color: #777;
   --anchor-color-hover: darken(#777, 4%);
@@ -59,10 +47,19 @@
   --button-default-background-color: #f1f1f1;
   --button-default-background-color-hover: darken(#f1f1f1, 4%);
   --button-default-text-color: #222;
+  --button-default-text-color-hover: #222;
 
-  --button-primary-background-color: rgba(85, 100, 114, 1);
-  --button-primary-background-color-hover: darken(rgba(85, 100, 114, 1), 4%);
+  --button-bordered-default-background-color: transparent;
+  --button-bordered-default-background-color-hover: transparent;
+  --button-bordered-default-text-color: #fff;
+  --button-bordered-default-text-color-hover: #fff;
+  --button-bordered-default-border-color: transparent;
+  --button-bordered-default-border-color-hover: #fff;
+
+  --button-primary-background-color: #313255;
+  --button-primary-background-color-hover: darken(#2f2e51, 4%);
   --button-primary-text-color: #fff;
+  --button-primary-text-color-hover: #fff;
 
   --button-secondary-background-color: transparent;
   --button-secondary-background-color-hover: transparent;
@@ -70,13 +67,46 @@
   --button-secondary-border-color: transparent;
   --button-secondary-border-color-hover: rgba(85, 100, 114, 1);
 
+  --button-bordered-venue-background-color: transparent;
+  --button-bordered-venue-background-color-hover: transparent;
+  --button-bordered-venue-text-color: #fff;
+  --button-bordered-venue-text-color-hover: #fff;
+  --button-bordered-venue-border-color: rgba(255, 255, 255, .1);
+  --button-bordered-venue-border-color-hover: rgba(255, 255, 255, .4);
+
   --button-disabled-background-color: rgba(85, 100, 114, .4);
   --button-disabled-background-color-hover: darken(rgba(85, 100, 114, .4), 7%);
   --button-disabled-text-color: #fff;
 
+  --button-cancel-background-color: #dc3545;
+  --button-cancel-background-color-hover: darken(#dc3545, 4%);
+  --button-cancel-text-color: #fff;
+  --button-cancel-text-color-hover: #fff;
+
   --separator-line: #ccc;
 
   --home-page-background-color: rgba(229, 236, 241, 1);
+
+  --slide-menu-background-color: #fff;
+
+  --modal-background-color: #fff;
+
+  --switch-field-border-color: #c2e3ee;
+  --switch-field-text-color: #222;
+  --switch-field-border-color-checked: darken(#c2e3ee, 5%);
+  --switch-field-background-color: #e2f8ff;
+  --switch-field-text-color-checked: #222;
+
+  --switch-toggle-background-color: #c2e3ee;
+  --switch-toggle-background-color-checked: #1dbcf0;
+
+  --checkbox-border-color: #1dbcf0;
+
+  --input-primary-background-color: transparent;
+  --input-primary-background-color-hover: #f1fcff;
+  --input-primary-border-color: #c2e3ee;
+  --input-primary-border-color-hover: darken(#c2e3ee, 5%);
+  --input-primary-shadow-color: rgba(13, 173, 224, .5);
 
   --blue: #007bff;
   --indigo: #6610f2;

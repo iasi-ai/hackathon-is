@@ -7,7 +7,125 @@
  * @link https://iasi.ai
  */
 
+.col(@col1) {
+  & > div {
+    @media (min-width: @mediaQueryLarge) {
+      .grid(@col1);
+    }
+  }
+}
+
+.cols(@col1, @col2) {
+  & > div:nth-child(1) {
+    @media (min-width: @mediaQueryLarge) {
+      .grid(@col1);
+    }
+  }
+
+  & > div:nth-child(2) {
+    @media (min-width: @mediaQueryLarge) {
+      .grid(@col2)
+    }
+  }
+}
+
 section {
 
+  // Section with columns
+  &.grid {
+    // Reset padding
+    padding: 0;
 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    @media (min-width: @mediaQueryLarge) {
+      flex-flow: row nowrap;
+      height: 100%;
+    }
+
+    & > div {
+      position: relative;
+
+      // Bottom div
+      &:nth-child(2) {
+        margin: 2em 0 0;
+
+        @media (min-width: @mediaQueryMedium) {
+          margin: 0 auto;
+        }
+      }
+
+      // Dark background
+      &.dark {
+        color: var(--text-color-white);
+      }
+    }
+
+    // With separator
+    &.withSeparatorLine {
+      & > div:nth-child(1) {
+        @media (min-width: @mediaQueryMedium) {
+          &:after {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            content: '';
+
+            width: 3px;
+            height: 50%;
+            opacity: .2;
+
+            // background: linear-gradient(to bottom, @color9, @color5);
+          }
+        }
+      }
+    }
+  }
+
+  // 2 columns grid
+  &.grid-2 {
+    .col(6);
+  }
+
+  // 3 columns grid
+  &.grid-3 {
+    .col(4);
+  }
+
+  // 7-5 columns grid
+  &.grid-7-5 {
+    .cols(7, 5);
+  }
+
+  // 8-4 columns grid
+  &.grid-8-4 {
+    .cols(8, 4);
+  }
+
+  // 9-3 columns grid
+  &.grid-9-3 {
+    .cols(9, 3);
+  }
+
+  // Half size window
+  &.hs-window {
+    .grid(11);
+    margin: auto;
+
+    @media (min-width: @mediaQueryMedium) {
+      .grid(5);
+    }
+
+    // Text centered half size window
+    &.hs-window-tc {
+      text-align: center;
+
+      & > .page-header {
+        display: inline-block;
+      }
+    }
+  }
 }

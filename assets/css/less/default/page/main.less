@@ -10,4 +10,22 @@
 // Main
 main {
   flex-grow: 1;
+
+  // Heading
+  h1 {
+    position: relative;
+    font-size: 2.4em;
+    font-weight: 400;
+    margin: 0 auto 0.75em;
+  }
+
+  // Paragraph
+  p {
+    font-size: 1.1em;
+    margin: 0 0 1.25em;
+
+    &:nth-of-type(:last-child) {
+      margin: 0;
+    }
+  }
 }
