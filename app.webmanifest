@@ -2,16 +2,16 @@
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "name": "Hackathon Iași",
     "short_name": "Hackathon IS",
-    "description": "",
+    "description": "On May 20th, 2023 we're gathering for a full day hackathon to digitize Iași. Software engineers, product people, technology passionate will contribute to create the next groundbreaking software solutions for Iași and its citizens.",
     "start_url": ".",
     "icons": [
         {
-            "src": "/192.png",
+            "src": "/assets/app.icon/192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/512.png",
+            "src": "/assets/app.icon/512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
