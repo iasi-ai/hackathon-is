@@ -300,7 +300,7 @@ const app = (() => {
 
         // Prepare API call
         const apiCall = {
-            method: method, mode: 'cors', cache: 'no-cache', credentials: 'same-origin', headers: {
+            method: method, headers: {
                 'Accept': 'application/json', 'Content-Type': 'application/json'
             }, body: body ? JSON.stringify(body) : ''
         };
@@ -800,12 +800,23 @@ const app = (() => {
                             if (json.error) {
                                 throw json.message;
                             } else {
-                                // Close dialog and refresh categories
-                                d.dlg.close();
 
                                 // Notify user
-                                // renderNotification(notification, json.message, 'success', 10, true);
-                                d.dlg.innerHTML = `<section class="registration-successful text-center"><span data-icon="&#xe001;" class="ic-colored ic-x3" style="--color:#28a745;"></span><h3>${json.message}</h3></section>`;
+                                d.dlg.innerHTML = `<section class="registration-successful text-center"><span data-icon="&#xe001;" class="ic-colored ic-x3" style="--color:#28a745;"></span><h4>${json.message}</h4></section><nav class="form-buttons"><a href="#cancel" class="btn btn-cancel close-dialog">Close</a></nav>`;
+
+                                // Close button action (if exists)
+                                const closeButton = d.dlg.querySelector('.close-dialog');
+                                if (closeButton) {
+                                    closeButton.addEventListener('click', (e) => {
+
+                                        // Prevent default
+                                        e.preventDefault();
+                                        e.stopPropagation();
+
+                                        // Close dialog
+                                        d.close();
+                                    });
+                                }
                             }
                         }).catch(err => {
 
