@@ -723,7 +723,7 @@ const app = (() => {
 
                         // Validate first name and last name
                         if (registrationFirstName.value.length === 0 || registrationLastName.value.length === 0 || registrationEmail.value.length === 0 || registrationPhone.value.length === 0) {
-                            throw `Fields marked with '*' are required. Please make sure all are filled.`;
+                            throw `Please make sure all required fields are filled in.`;
                         } else if (!registrationEmail.value.match(validateEmail)) {
                             throw `E-mail address is invalid. Please use a different one.`;
                         } else {
@@ -745,7 +745,7 @@ const app = (() => {
 
                             // Team name
                             if (registrationTeamName.value.length === 0) {
-                                throw `Team name is mandatory. Please type in your team name.`;
+                                throw `Please make sure you provide a name for your team.`;
                             } else {
                                 data.team.name = registrationTeamName.value.trim();
                             }
@@ -774,7 +774,6 @@ const app = (() => {
                                             });
                                         }
                                     }
-
                                 });
                             }
                         }
@@ -792,7 +791,7 @@ const app = (() => {
                         }
 
                         // Perform API call
-                        app.api(`https://api.hackathon.is/registration/`, 'POST', {
+                        app.api(`https://api.hackathon.is/api/registration/`, 'POST', {
                             action: 'registration',
                             value: data
                         }).then(response => {
@@ -805,7 +804,8 @@ const app = (() => {
                                 d.dlg.close();
 
                                 // Notify user
-                                renderNotification(notification, json.message, 'success', 10, true);
+                                // renderNotification(notification, json.message, 'success', 10, true);
+                                d.dlg.innerHTML = `<section class="registration-successful text-center"><span data-icon="&#xe001;" class="ic-colored ic-x3" style="--color:#28a745;"></span><h3>${json.message}</h3></section>`;
                             }
                         }).catch(err => {
 
