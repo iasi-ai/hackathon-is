@@ -25,10 +25,10 @@
 
   // Brands
   .event-brands {
-    display: flex;
-    flex-flow: column nowrap;
+    // display: flex;
+    // flex-flow: column nowrap;
 
-    @media (min-width: @mediaQueryLarge) {
+    /*@media (min-width: @mediaQueryLarge) {
       flex-flow: row nowrap;
     }
 
@@ -44,11 +44,16 @@
       @media (min-width: @mediaQueryMedium) {
         margin: 0 0 0 6em;
       }
+    }*/
+
+    // Community brands
+    &.community-brands {
+      margin: 3em auto 0;
     }
 
     .brands {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: row wrap;
       align-items: center;
       justify-content: space-evenly;
 
@@ -61,6 +66,16 @@
 
         &:nth-child(1) {
           margin: 0;
+        }
+
+        &:nth-child(3n) {
+          margin: 1.5em 0 0;
+        }
+
+        @media (min-width: @mediaQueryMedium) {
+          &:nth-child(3n) {
+            margin: 0 0 0 1em;
+          }
         }
       }
     }
