@@ -10,6 +10,7 @@
 // Main
 main {
   flex-grow: 1;
+  padding: 0 0 4em;
 
   // Heading
   h1 {
@@ -17,6 +18,24 @@ main {
     font-size: 2.4em;
     font-weight: 400;
     margin: 0 auto 0.75em;
+    line-height: 1;
+    text-align: center;
+
+    @media(min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+
+    & > span {
+      display: block;
+      font-size: .5em;
+      text-transform: uppercase;
+      margin: .5em auto 0;
+      opacity: .5;
+
+      @media (min-width: @mediaQueryMedium) {
+        margin: .25em auto 0;
+      }
+    }
   }
 
   // Paragraph
@@ -27,6 +46,37 @@ main {
 
     &:nth-of-type(:last-child) {
       margin: 0;
+    }
+  }
+
+  // Lists
+  dl {
+
+    dt {
+      position: relative;
+      font-weight: 700;
+      padding-left: 1.5em;
+
+      &:before {
+        position: absolute;
+        left: 0;
+        content: attr(data-order);
+      }
+    }
+
+    dd {
+      padding-left: 1.5em;
+      margin: 0 auto 1.5em;
+
+      &:last-child {
+        margin: 0 auto;
+      }
+
+      & > ul {
+        margin: .5em 1.25em;
+        list-style: square;
+        font-size: .9em;
+      }
     }
   }
 }
