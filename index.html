@@ -20,7 +20,7 @@
     <link as="style" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="preload"/>
     <link as="style" href="https://hackathon.is/assets/css/app.css" rel="preload"/>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap&subset=all" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://hackathon.is/assets/css/app.css"/>
+    <link rel="stylesheet" href="/assets/css/app.css"/>
 </head>
 <body class="page home-page">
 
@@ -32,7 +32,6 @@
             <button class="btn btn-clear btn-slide-close" name="close" aria-label="close">&#10005;</button>
             <ul>
                 <li><a href="https://hackathon.is/faq/" class="btn">FAQ</a></li>
-                <li class="separator separator-bordered"><a href="#" class="btn btn-primary btn-register" data-dlg=".register-dialog">Register</a></li>
             </ul>
         </nav>
     </div>
@@ -63,22 +62,31 @@
 
         <hr />
 
-        <section class="event-brands">
+        <section class="event-brands grid grid-5-7">
             <div>
                 <h3>Partners</h3>
                 <ul class="brands">
-                    <li><img src="https://hackathon.is/assets/partners/logo-levi9.png" height="50" alt="Levi9" /></li>
-                    <li><img src="https://hackathon.is/assets/partners/logo-ness.png" height="50" alt="Ness Digital Engineering" /></li>
-                    <li><img src="https://hackathon.is/assets/partners/logo-feelitservices.png" height="50" alt="Feel IT Services" /></li>
+                    <li><a href="https://www.levi9.com/" target="_blank" class="na" rel="nofollow noopener external" title="Levi9"><img src="https://hackathon.is/assets/partners/logo-levi9.png" height="50" alt="Levi9" /></a></li>
+                    <li><a href="https://www.ness.com/ness-romania/" target="_blank" class="na" rel="nofollow noopener external" title="Ness Digital Engineering"><img src="https://hackathon.is/assets/partners/logo-ness.png" height="50" alt="Ness Digital Engineering" /></a></li>
+                    <li><a href="https://www.feel-it-services.com/en/" target="_blank" class="na" rel="nofollow noopener external" title="Feel IT Services"><img src="https://hackathon.is/assets/partners/logo-feelitservices.png" height="50" alt="Feel IT Services" /></a></li>
                 </ul>
             </div>
             <div>
                 <h3>Organizers</h3>
                 <ul class="brands">
-                    <li><img src="https://s3.iasi.ai/app.logo/2/logo-600.png" height="50" alt="IAȘI AI community" /></li>
-                    <li><img src="https://hackathon.is/assets/partners/logo-cityhall.png" height="50" alt="Iași City Hall" /></li>
+                    <li><a href="https://iasi.ai" target="_blank" class="na" rel="nofollow noopener external" title="IAȘI AI"><img src="https://hackathon.is/assets/partners/logo-iasi-ai.png" height="50" alt="IAȘI AI community" /></a></li>
+                    <li><a href="https://www.primaria-iasi.ro/" target="_blank" class="na" rel="nofollow noopener external" title="Iași City Hall"><img src="https://hackathon.is/assets/partners/logo-city-hall.png" height="50" alt="Iași City Hall" /></a></li>
                 </ul>
             </div>
+        </section>
+
+        <section class="event-brands community-brands">
+            <h3>Community</h3>
+            <ul class="brands">
+                <li><img src="https://hackathon.is/assets/partners/logo-civica.png" height="40" alt="Asociția CIVICA" /></li>
+                <li><img src="https://hackathon.is/assets/partners/logo-calemis.png" height="40" alt="Asociația Calemis" /></li>
+                <li><img src="https://hackathon.is/assets/partners/logo-diz.png" height="40" alt="Digital Innovation Zone" /></li>
+            </ul>
         </section>
 
     </div>
@@ -160,7 +168,7 @@
                         <p>Build a mobile game which makes use of the existing air quality and public transportation APIs available at <a href="https://iasi.oras.digital" target="_blank" rel="nofollow noopener">Iași Open Data Platform</a>.</p>
                         <ul class="event-challenge">
                             <li>Theme: <strong>Smart Economy</strong></li>
-                            <li>Challenge owner: <img src="https://hackathon.is/assets/partners/logo-levi9-colored.png" height="35" alt="Levi9"/></li>
+                            <li>Challenge owner: <img src="https://hackathon.is/assets/partners/logo-levi9.png" height="35" alt="Levi9"/></li>
                         </ul>
                     </div>
                 </div>
@@ -174,7 +182,7 @@
                         <p>Solution for measuring noise pollution and/or identify future initiatives which contributes to citizens protection.</p>
                         <ul class="event-challenge">
                             <li>Theme: <strong>Smart Environment</strong></li>
-                            <li>Challenge owner: <img src="https://hackathon.is/assets/partners/logo-feelitservices-colored.png" height="35" alt="Feel IT Services"/></li>
+                            <li>Challenge owner: <img src="https://hackathon.is/assets/partners/logo-feelitservices.png" height="35" alt="Feel IT Services"/></li>
                         </ul>
                     </div>
                 </div>
@@ -188,7 +196,7 @@
                         <p>Intelligent traffic light system that can optimally manage color changes, depending on the level of traffic congestion on a given intersection.</p>
                         <ul class="event-challenge">
                             <li>Theme: <strong>Smart Mobility</strong></li>
-                            <li>Challenge owner: <img src="https://hackathon.is/assets/partners/logo-ness-colored.png" height="35" alt="Ness Digital Engineering"/></li>
+                            <li>Challenge owner: <img src="https://hackathon.is/assets/partners/logo-ness.png" height="35" alt="Ness Digital Engineering"/></li>
                         </ul>
                     </div>
                 </div>
