@@ -107,17 +107,16 @@ main {
   ul {
     &.list {
       padding: 0;
-      margin: 0 1.4em 1em;
+      margin: 0 .5em 1em;
       list-style: none;
 
       & > li {
         font-size: .94em;
-        padding-left: 1em;
 
-        &::marker {
+        &::before {
           content: '\2911';
           padding-right: 0.75em;
-          color: var(--color-logo);
+          color: var(--logo-color);
         }
       }
     }
