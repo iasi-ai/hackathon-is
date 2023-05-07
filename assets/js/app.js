@@ -420,7 +420,7 @@ const app = (() => {
                             dialogClassName: 'modal-dialog',
                             dialogPlaceholderClassName: 'dialog-placeholder',
                             closeOnEsc: true,
-                            closeOnOutsideClick: true,
+                            closeOnOutsideClick: false,
                             callback: {
                                 onShow: () => {
                                     document.body.classList.add('no-scroll');
