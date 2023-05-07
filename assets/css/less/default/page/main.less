@@ -38,6 +38,30 @@ main {
     }
   }
 
+  h2 {
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    margin: 1.25em auto .75em;
+
+    @media(min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+  }
+
+  h3 {
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    margin: 1.25em auto .5em;
+
+    @media(min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+  }
+
   // Paragraph
   p {
     font-size: 1.1em;
@@ -55,7 +79,7 @@ main {
     dt {
       position: relative;
       font-weight: 700;
-      padding-left: 1.5em;
+      padding-left: 1.75em;
 
       &:before {
         position: absolute;
@@ -65,7 +89,7 @@ main {
     }
 
     dd {
-      padding-left: 1.5em;
+      padding-left: 1.75em;
       margin: 0 auto 1.5em;
 
       &:last-child {
@@ -76,6 +100,25 @@ main {
         margin: .5em 1.25em;
         list-style: square;
         font-size: .9em;
+      }
+    }
+  }
+
+  ul {
+    &.list {
+      padding: 0;
+      margin: 0 1.4em 1em;
+      list-style: none;
+
+      & > li {
+        font-size: .94em;
+        padding-left: 1em;
+
+        &::marker {
+          content: '\2911';
+          padding-right: 0.75em;
+          color: var(--color-logo);
+        }
       }
     }
   }
