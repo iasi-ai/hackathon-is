@@ -274,9 +274,9 @@ class Dialog {
 
 /**
  * Hackathon Iași
- * Powered by IAȘI AI community
+ * Powered by IASI AI community
  *
- * @copyright (c) 2023 IAȘI AI. All rights reserved.
+ * @copyright (c) 2023 IASI AI. All rights reserved.
  * @link https://hackathon.is
  * @link https://iasi.ai
  */
@@ -420,7 +420,7 @@ const app = (() => {
                             dialogClassName: 'modal-dialog',
                             dialogPlaceholderClassName: 'dialog-placeholder',
                             closeOnEsc: true,
-                            closeOnOutsideClick: false,
+                            closeOnOutsideClick: true,
                             callback: {
                                 onShow: () => {
                                     document.body.classList.add('no-scroll');
