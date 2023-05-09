@@ -9,19 +9,49 @@
 
 // Footer
 footer {
-
-  padding: 1.5em 0;
-  margin: 1em auto;
+  .grid;
+  background-color: var(--footer-background);
+  padding: 2em 0;
+  margin: 1em auto 0;
   color: var(--text-color-white);
-  font-size: 1em;
+  font-size: .9em;
   text-align: center;
 
   @media (min-width: @mediaQueryMedium) {
     text-align: left;
   }
 
-  // Copyright paragraph
-  p:nth-child(2) {
-    font-size: .8em;
+  // Positioning
+  .copyright {
+    text-align: center;
+
+    @media (min-width: @mediaQueryMedium) {
+      text-align: right;
+    }
+  }
+
+  // Paragraphs
+  p {
+    & > a {
+      display: inline-block;
+
+      & > img {
+        padding: 0 .25em;
+      }
+    }
+  }
+
+  // Lists
+  nav {
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-around;
+
+      @media (min-width: @mediaQueryMedium) {
+        justify-content: flex-start;
+      }
+    }
   }
 }
