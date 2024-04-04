@@ -608,8 +608,7 @@ const app = (() => {
 
                 // Challenge
                 const registrationChallenge1 = registrationForm.querySelector('input#challenge1'),
-                    registrationChallenge2 = registrationForm.querySelector('input#challenge2'),
-                    registrationChallenge3 = registrationForm.querySelector('input#challenge3');
+                    registrationChallenge2 = registrationForm.querySelector('input#challenge2');
 
                 // Terms and Conditions
                 const registrationAgreeTerms = registrationForm.querySelector('input[name=agreeTerms]');
@@ -779,7 +778,7 @@ const app = (() => {
                         }
 
                         // Registration challenge
-                        data.challenge = registrationChallenge1.checked ? 1 : (registrationChallenge2.checked ? 2 : registrationChallenge3.checked ? 3 : 0);
+                        data.challenge = registrationChallenge1.checked ? 1 : (registrationChallenge2.checked ? 2 : 0);
                         if (data.challenge === 0) {
                             throw `You haven't chosen the hackathon challenge.`;
                         }
