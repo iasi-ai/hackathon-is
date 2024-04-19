@@ -88,6 +88,7 @@
       flex-flow: row wrap;
       align-items: center;
       justify-content: space-evenly;
+      margin: 0 auto .75em;
 
       @media (min-width: @mediaQueryMedium) {
         justify-content: flex-start;
@@ -107,6 +108,14 @@
         @media (min-width: @mediaQueryMedium) {
           &:nth-child(3n) {
             margin: 0 0 0 1em;
+          }
+        }
+
+        img {
+
+          // Inverse colors
+          &.invert {
+            filter: brightness(0) invert(1);
           }
         }
       }
